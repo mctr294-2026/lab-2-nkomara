@@ -87,7 +87,7 @@ bool newton_raphson(std::function<double(double)> f,
                     double a, double b, double c,
                     double *root) {
                         const double tol = 1e-6;
-                        const double max_iterations = 1000;
+                        const double max_iterations = 100000;
 
                         double x=c;
                         double x_new;
@@ -116,7 +116,7 @@ bool newton_raphson(std::function<double(double)> f,
 bool secant(std::function<double(double)> f,
             double a, double b, double c,
             double *root) {
-                const int max_iterations = 1000;
+                const int max_iterations = 100000;
                 const double tol = 1e-6;
 
                 if (c < a || c > b) {
